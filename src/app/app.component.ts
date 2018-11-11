@@ -4,6 +4,7 @@ import Map from 'ol/Map';
 import View from 'ol/View';
 import OSM from 'ol/source/OSM';
 import TileLayer from 'ol/layer/Tile';
+import * as proj from 'ol/proj';
 
 @Component({
   selector: 'app-root',
@@ -11,20 +12,32 @@ import TileLayer from 'ol/layer/Tile';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  map: Map; 
+  map: Map;
+  view: View;
 
   ngOnInit() {
-    var map = new Map({
+    this.view = new View({
+      center: proj.fromLonLat([37.41, 8.82]),
+      zoom: 4
+    });
+    this.map = new Map({
       target: 'map',
       layers: [
         new TileLayer({
           source: new OSM()
         })
       ],
-      view: new View({
-        center: [37.41, 8.82],
-        zoom: 4
-      })
+      view: this.view
     });
+
+  }
+
+  resetCenter() {
+    this.view.setCenter(
+      proj.fromLonLat([
+        Math.random() * 170,
+        Math.random() * 80
+      ])
+    );
   }
 }
