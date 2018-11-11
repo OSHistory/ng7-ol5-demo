@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build_localhost": "ng build --prod --output-path='/var/www/html/ng7-ol5-demo/' --base-href='/ng7-ol5-demo/'",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -21,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
     "core-js": "^2.5.4",
+    "ol": "^5.3.0",
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.26"
   },

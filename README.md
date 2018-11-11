@@ -1,4 +1,11 @@
-# Ng7Ol5Demo
+# README 
+
+This repository serves as a testing ground to verify 
+the correct behaviour of OpenLayers inside an 
+angular7 project, especially its production 
+build. 
+
+# NG-Client output
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4.
 
