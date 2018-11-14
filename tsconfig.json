@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ol-integration": [
+        "dist/ol-integration"
+      ],
+      "ol-integration/*": [
+        "dist/ol-integration/*"
+      ]
+    }
   }
 }

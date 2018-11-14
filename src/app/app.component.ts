@@ -16,19 +16,19 @@ export class AppComponent implements OnInit {
   view: View;
 
   ngOnInit() {
-    this.view = new View({
-      center: proj.fromLonLat([37.41, 8.82]),
-      zoom: 4
-    });
-    this.map = new Map({
-      target: 'map',
-      layers: [
-        new TileLayer({
-          source: new OSM()
-        })
-      ],
-      view: this.view
-    });
+    // this.view = new View({
+    //   center: proj.fromLonLat([37.41, 8.82]),
+    //   zoom: 4
+    // });
+    // this.map = new Map({
+    //   target: 'map',
+    //   layers: [
+    //     new TileLayer({
+    //       source: new OSM()
+    //     })
+    //   ],
+    //   view: this.view
+    // });
 
   }
 

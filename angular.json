@@ -131,6 +131,41 @@
           }
         }
       }
+    },
+    "ol-integration": {
+      "root": "projects/ol-integration",
+      "sourceRoot": "projects/ol-integration/src",
+      "projectType": "library",
+      "prefix": "nod",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ol-integration/tsconfig.lib.json",
+            "project": "projects/ol-integration/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ol-integration/src/test.ts",
+            "tsConfig": "projects/ol-integration/tsconfig.spec.json",
+            "karmaConfig": "projects/ol-integration/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ol-integration/tsconfig.lib.json",
+              "projects/ol-integration/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ng7-ol5-demo"
