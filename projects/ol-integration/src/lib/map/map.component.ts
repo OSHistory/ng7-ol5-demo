@@ -35,4 +35,13 @@ export class MapComponent implements OnInit {
 
   }
 
+  resetCenter() {
+    this.view.setCenter(
+      proj.fromLonLat([
+        Math.random() * 170,
+        Math.random() * 80
+      ])
+    );
+  }
+
 }

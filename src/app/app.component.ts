@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+
+import { MapComponent } from 'ol-integration';
 
 import Map from 'ol/Map';
 import View from 'ol/View';
@@ -12,6 +14,10 @@ import * as proj from 'ol/proj';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  
+  @ViewChild(MapComponent)
+  mapComp: MapComponent;
+
   map: Map;
   view: View;
 
@@ -33,11 +39,6 @@ export class AppComponent implements OnInit {
   }
 
   resetCenter() {
-    this.view.setCenter(
-      proj.fromLonLat([
-        Math.random() * 170,
-        Math.random() * 80
-      ])
-    );
+    this.mapComp.resetCenter();
   }
 }
