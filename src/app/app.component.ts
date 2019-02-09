@@ -14,7 +14,7 @@ import * as proj from 'ol/proj';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  
+
   @ViewChild(MapComponent)
   mapComp: MapComponent;
 
@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
     //   ],
     //   view: this.view
     // });
-
+    this.view = this.mapComp.exposeView();
   }
 
   resetCenter() {

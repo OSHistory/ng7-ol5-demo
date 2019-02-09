@@ -5,6 +5,7 @@ import View from 'ol/View';
 import OSM from 'ol/source/OSM';
 import TileLayer from 'ol/layer/Tile';
 import * as proj from 'ol/proj';
+import Projection from 'ol/proj/Projection';
 
 @Component({
   selector: 'nod-map',
@@ -15,7 +16,7 @@ export class MapComponent implements OnInit {
 
   view: View;
   map: Map;
-  
+
   constructor() { }
 
   ngOnInit() {
@@ -33,6 +34,8 @@ export class MapComponent implements OnInit {
       view: this.view
     });
 
+    const my_proj: Projection = this.view.getProjection();
+    console.log(my_proj.getUnits());
   }
 
   resetCenter() {
@@ -42,6 +45,10 @@ export class MapComponent implements OnInit {
         Math.random() * 80
       ])
     );
+  }
+
+  exposeView(): View {
+    return this.view;
   }
 
 }

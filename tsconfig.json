@@ -25,5 +25,9 @@
         "dist/ol-integration/*"
       ]
     }
-  }
+  },
+  "include": [
+    "src/**/*",
+    "node_modules/ol/**/*.js"
+  ]
 }
