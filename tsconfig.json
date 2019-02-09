@@ -28,6 +28,6 @@
   },
   "include": [
     "src/**/*",
-    "node_modules/ol/**/*.js"
+    "node_modules/ol/src/**/*.js"
   ]
 }
