@@ -23,7 +23,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/ol/ol.css",
+              "./node_modules/ol/src/ol.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -81,7 +81,7 @@
             "karmaConfig": "src/karma.conf.js",
             "styles": [
               "src/styles.css",
-              "./node_modules/ol/ol.css"
+              "./node_modules/ol/src/ol.css"
             ],
             "scripts": [],
             "assets": [
