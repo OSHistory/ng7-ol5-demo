@@ -1,0 +1,32 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "checkJs": true,
+    "noEmit": true,
+    "baseUrl": "./",
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      "ol-integration": [
+        "dist/ol-integration"
+      ],
+      "ol-integration/*": [
+        "dist/ol-integration/*"
+      ],
+      "ol": [
+        "node_modules/ol/src"
+      ],
+      "ol/*": [
+        "node_modules/ol/src/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.js",
+    "src/app/**/*.ts",
+    "projects/**/*.ts",
+    "node_modules/ol/**/*.js"
+  ]
+}
