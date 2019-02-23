@@ -5,7 +5,18 @@ the correct behaviour of OpenLayers inside an
 angular7 project, especially its production 
 build. 
 
-# NG-Client output
+## Usage
+
+The project also tests the behaviour of OL inside an 
+angular library (ol-integration). So you need to build 
+the library first by running: 
+
+`npm run build_lib`
+
+Then you can go ahead and do 
+the usual stuff: 
+
+## NG-Client output
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4.
 
